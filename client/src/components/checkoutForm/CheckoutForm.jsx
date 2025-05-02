@@ -7,7 +7,7 @@ import {
   useElements,
 } from "@stripe/react-stripe-js";
 
-const CheckoutForm = ({ successUrl = "http://localhost:5173/success" }) => {
+const CheckoutForm = ({ successUrl = "https://freelancify-swart.vercel.app/success" }) => {
   const stripe = useStripe();
   const elements = useElements();
 
