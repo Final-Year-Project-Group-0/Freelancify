@@ -14,7 +14,7 @@ const MyJobs = () => {
     const fetchJobs = async () => {
       setLoading(true);
       try {
-        const response = await newRequest.get("/jobs/myjobs");
+        const response = await newRequest.get("jobs/myjobs");
         setJobs(response.data);
       } catch (err) {
         setError(err.response?.data || "Something went wrong!");
