@@ -5,9 +5,14 @@ const newRequest = axios.create({
   withCredentials: true,
 });
 
-// Add request interceptor for logging
+// Add token to request headers
 newRequest.interceptors.request.use(
   function (config) {
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    if (currentUser?.token) {
+      config.headers.Authorization = `Bearer ${currentUser.token}`;
+    }
+
     console.log(`Making ${config.method.toUpperCase()} request to: ${config.baseURL}${config.url}`);
     return config;
   },
@@ -17,7 +22,7 @@ newRequest.interceptors.request.use(
   }
 );
 
-// Add response interceptor for logging
+// Logging the response
 newRequest.interceptors.response.use(
   function (response) {
     console.log(`Response from ${response.config.url}:`, response.status);
