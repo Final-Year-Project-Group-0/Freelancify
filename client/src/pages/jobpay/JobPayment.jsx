@@ -74,7 +74,7 @@ const JobPayment = () => {
       {clientSecret ? (
         <div className="payment-form-wrapper">
           <Elements options={options} stripe={stripePromise}>
-            <CheckoutForm successUrl="http://localhost:5173/job-payment-success" />
+            <CheckoutForm successUrl="https://freelancify-swart.vercel.app/job-payment-success" />
           </Elements>
         </div>
       ) : (
