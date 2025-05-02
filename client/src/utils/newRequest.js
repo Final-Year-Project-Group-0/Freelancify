@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const newRequest = axios.create({
-  baseURL: "https://freelancify-pzti.onrender.com/api/",
+  baseURL: "https://freelancify-pzti.onrender.com/api",
   withCredentials: true,
 });
 
