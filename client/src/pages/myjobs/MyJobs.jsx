@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import newRequest from "../../utils/newRequest";
-import "./MyJobs.css";
+import "./Myjobs.css";
 
 const MyJobs = () => {
   const [jobs, setJobs] = useState([]);
