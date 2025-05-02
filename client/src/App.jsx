@@ -32,7 +32,7 @@ import JobPaymentSuccess from "./pages/jobpaymentsuccess/JobPaymentSuccess";
 import GoogleRegister from "./pages/googleRegister/GoogleRegister";
 import { RequireAuth, RequireSeller, RequireClient, RedirectIfAuth } from "./utils/RouteProtection";
 import FAQ from "./pages/faq/FAQ";
-import "./App.scss";
+import "./app.scss";
 import {
   QueryClient,
   QueryClientProvider,
