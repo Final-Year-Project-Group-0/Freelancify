@@ -267,8 +267,8 @@ const PrivacyPolicy = () => {
                       <div class="section">
                         <h2>6. Contact Us</h2>
                         <p>If you have any questions about this Privacy Policy or how we handle your information, please reach out to us at:</p>
-                        <p><strong>Email:</strong> privacy@freelancify.com</p>
-                        <p><strong>Address:</strong> 123 Freelance Street, Tech Valley, CA 94043</p>
+                        <p><strong>Email:</strong> freelancify0@gmail.com</p>
+                        <p><strong>Address:</strong> Irla, N. R, G Marg, opposite Cooper Hospital, Navpada, Suvarna Nagar, Vile Parle, Mumbai, Maharashtra 400056</p>
                       </div>
                       
                       <div class="footer">
