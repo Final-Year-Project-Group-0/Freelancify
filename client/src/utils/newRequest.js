@@ -1,18 +1,13 @@
 import axios from "axios";
 
 const newRequest = axios.create({
-  baseURL: "https://freelancify-pzti.onrender.com/api",
+  baseURL: "https://freelancify-pzti.onrender.com/api/",
   withCredentials: true,
 });
 
-// Add token to request headers
+// Add request interceptor for logging
 newRequest.interceptors.request.use(
   function (config) {
-    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-    if (currentUser?.token) {
-      config.headers.Authorization = `Bearer ${currentUser.token}`;
-    }
-
     console.log(`Making ${config.method.toUpperCase()} request to: ${config.baseURL}${config.url}`);
     return config;
   },
@@ -22,7 +17,7 @@ newRequest.interceptors.request.use(
   }
 );
 
-// Logging the response
+// Add response interceptor for logging
 newRequest.interceptors.response.use(
   function (response) {
     console.log(`Response from ${response.config.url}:`, response.status);
